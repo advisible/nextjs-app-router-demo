@@ -13,8 +13,8 @@ export default function RootLayout({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en">
-            <Script strategy="afterInteractive" src="/main.js" />
+        <html>
+            <Script src="/main.js" />
             <body>
                 <header>
                     <h1>Advisible - Next.js App Router demo</h1>
