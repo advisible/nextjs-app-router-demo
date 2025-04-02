@@ -3,7 +3,6 @@
     el.setAttribute('src', 'https://cdn.advisible.com/adk-1.20.16.js');
     document.head.appendChild(el)
 
-    window.adk ||= { cmd: [] }
     adk.cmd.push(() => {
         adk.config()
             .addContainer('does-not-reload', adk.container.config()
