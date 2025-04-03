@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useAdkReset } from '@advisible/adk-react'
 
 const LINKS = [
     { href: '/', label: 'Static route' },
@@ -10,6 +11,8 @@ const LINKS = [
 
 export default function Menu() {
     const pathname = usePathname()
+    useAdkReset(pathname)
+
     return (
         <nav>
             {LINKS.map(({ href, label }) =>
