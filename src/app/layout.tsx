@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { AdkContainer } from '@advisible/adk-react'
 
 import Menu from './menu'
 
@@ -21,6 +22,7 @@ export default function RootLayout({
                     <Menu />
                 </header>
                 {children}
+                <AdkContainer id="does-not-reload" />
             </body>
         </html>
     )
