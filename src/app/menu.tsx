@@ -11,6 +11,13 @@ const LINKS = [
 
 export default function Menu() {
     const pathname = usePathname()
+    /*
+     * `pathname` does not include query parameters. Add them to the string
+     * passed to `useAdkReset` to also trigger a reset on query parameter changes:
+     *
+     * const params = useSearchParams()
+     * useAdkReset(pathname + params)
+    */
     useAdkReset(pathname)
 
     return (
